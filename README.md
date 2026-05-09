@@ -10,7 +10,7 @@
 [![Firebase](https://img.shields.io/badge/DB-Firebase-orange?style=flat-square&logo=firebase)](https://firebase.google.com)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
-[🔗 アプリを開く](https://qr-designer.vercel.app) • [俺の付箋について](https://ore-no-fusen.vercel.app)
+[🔗 アプリを開く](https://ore-no-qr.vercel.app) • [俺の付箋について](https://ore-no-fusen.vercel.app)
 
 </div>
 
