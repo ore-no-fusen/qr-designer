@@ -12,7 +12,8 @@ export default defineConfig({
       { text: '001', link: '/001_OVERVIEW' },
       { text: '002', link: '/002_WEB' },
       { text: '003', link: '/003_TEST' },
-      { text: '004', link: '/004_GLOSSARY' }
+      { text: '004', link: '/004_GLOSSARY' },
+      { text: '005', link: '/005_WORKFLOW' }
     ],
 
     sidebar: [
@@ -24,7 +25,8 @@ export default defineConfig({
           { text: '001 システム全体像', link: '/001_OVERVIEW' },
           { text: '002 Web機能仕様', link: '/002_WEB' },
           { text: '003 テスト仕様', link: '/003_TEST' },
-          { text: '004 用語集', link: '/004_GLOSSARY' }
+          { text: '004 用語集', link: '/004_GLOSSARY' },
+          { text: '005 運用フロー', link: '/005_WORKFLOW' }
         ]
       }
     ],
