@@ -1,10 +1,20 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid(defineConfig({
   title: '俺のQR',
   description: 'DESIGN DOCS PORTAL',
   base: '/docs/',
+  mermaid: {
+    sequence: {
+      messageMargin: 12,
+      mirrorActors: false,
+      height: 28,
+      boxMargin: 6,
+      noteMargin: 8,
+    }
+  },
   themeConfig: {
     nav: [
       { text: 'INDEX', link: '/' },
@@ -39,4 +49,4 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/ore-no-fusen/ore-no-qr' }
     ]
   }
-})
+}))

@@ -49,7 +49,7 @@ graph TD
     C -->|NG| B
     C -->|OK| D[④ developへPush]
     D --> E[1️⃣ Vercelプレビュー環境生成]
-    E --> F{⑤ プレビューで実機・手動確認}
+    E --> F{⑤ 実機プレビュー確認}
     F -->|NG| B
     F -->|OK| G[⑥ mainへPull Request]
     G --> H[2️⃣ GitHub Actions: 自動E2Eテスト]
