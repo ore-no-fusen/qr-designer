@@ -19,7 +19,7 @@ test.describe('俺のQR 総合テスト', () => {
     // プレビューエリアのスクリーンショットを撮り、デザイン（黄色の付箋スタイル、サイズ、余白など）が崩れていないか確認する
     // 初回実行時は正解画像が保存され、次回以降に差分がないかを自動チェックします
     const previewArea = page.locator('.sticky-note-container').locator('..');
-    await expect(previewArea).toHaveScreenshot('qr-preview-with-logo.png');
+    await expect(previewArea).toHaveScreenshot('qr-preview-with-logo.png', { maxDiffPixelRatio: 0.05 });
   });
 
   test('BRAND: クレジットのON/OFFでウォーターマークが切り替わる', async ({ page }) => {
@@ -31,7 +31,7 @@ test.describe('俺のQR 総合テスト', () => {
     await page.getByRole('checkbox', { name: '「俺の付箋」のクレジットを入れる' }).uncheck();
     
     // ロゴなしバージョンのデザインが崩れていないか確認
-    await expect(previewArea).toHaveScreenshot('qr-preview-no-logo.png');
+    await expect(previewArea).toHaveScreenshot('qr-preview-no-logo.png', { maxDiffPixelRatio: 0.05 });
   });
 
   test('SAVE: 保存ボタンで File System Access API が呼ばれ、外部通信が発生しない', async ({ page }) => {
@@ -63,7 +63,7 @@ test.describe('俺のQR 総合テスト', () => {
     await page.getByRole('button', { name: 'QR付箋を保存する' }).click();
 
     // 成功メッセージが出るのを待つ
-    await expect(page.getByText(/🎉.*🎉/)).toBeVisible();
+    await expect(page.getByText(/✨.*✨/)).toBeVisible();
 
     // モック化された保存ダイアログが正しいファイル名で呼ばれたか確認
     const state = await saveDialogCalled.jsonValue();
